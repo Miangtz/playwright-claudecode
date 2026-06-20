@@ -1,0 +1,17 @@
+{
+  "name": "playwright-claudecode",
+  "version": "1.0.0",
+  "description": "Repositorio de pruebas automatizadas con Playwright + TypeScript + Cucumber y coworker IA",
+  "scripts": {
+    "test": "bddgen && playwright test",
+    "test:headed": "bddgen && playwright test --headed",
+    "test:report": "playwright show-report",
+    "codegen": "playwright codegen",
+    "dashboard": "node dashboard/server.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "playwright-bdd": "^9.0.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+.features-gen/
+playwright-report/
+test-results/
+.tsbuild/
+dashboard/last-results.json
+.DS_Store

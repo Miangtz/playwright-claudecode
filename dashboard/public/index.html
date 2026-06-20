@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto personal de UI para pruebas automatizadas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <div class="app-icon">✓</div>
+        <div>
+          <h1>Proyecto personal de UI para pruebas automatizadas</h1>
+          <p class="subtitle">Pruebas de distintos proyectos, de fácil ejecución y en tiempo real.</p>
+          <p class="credit">Creado por Miguel Gutiérrez</p>
+        </div>
+      </div>
+      <nav class="segmented" id="segmented" role="tablist">
+        <button class="seg-btn active" data-view="tests">Pruebas</button>
+        <button class="seg-btn" data-view="memory">Memoria</button>
+        <span class="seg-thumb" aria-hidden="true"></span>
+      </nav>
+      <div class="actions">
+        <span id="status-pill" class="pill idle">Listo</span>
+        <button id="open-report" class="btn btn-ghost">Último reporte</button>
+        <button id="run-all" class="btn btn-primary">Correr todo</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats">
+        <div class="stat">
+          <span class="stat-value" id="stat-total">—</span>
+          <span class="stat-label">Escenarios</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="stat-sites">—</span>
+          <span class="stat-label">Sitios</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="stat-pass">—</span>
+          <span class="stat-label">Pasando</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="stat-fail">—</span>
+          <span class="stat-label">Fallando</span>
+        </div>
+      </section>
+
+      <section id="catalog" class="catalog">
+        <p class="loading">Cargando pruebas…</p>
+      </section>
+
+      <section id="view-memory" class="memory" hidden>
+        <div class="memory-main">
+          <h3 class="memory-title">⚠️ Problemas conocidos de las páginas</h3>
+          <div id="memory-issues"><p class="loading">Cargando la memoria…</p></div>
+          <h3 class="memory-title">🧯 Historial de fallos</h3>
+          <div id="memory-failures"></div>
+        </div>
+        <aside class="memory-side">
+          <h3 class="memory-title">📜 Changelog de la suite</h3>
+          <div id="memory-timeline" class="timeline"></div>
+        </aside>
+      </section>
+
+      <aside class="live" id="live-panel">
+        <div class="live-progress"></div>
+        <div class="live-head">
+          <h2>En vivo</h2>
+          <span id="live-sub" class="live-sub">Apretá “Correr” en cualquier prueba para verla en acción.</span>
+        </div>
+        <div id="live-body" class="live-body">
+          <div class="empty">
+            <span class="empty-emoji">🎬</span>
+            <p>Acá vas a ver los pasos de cada prueba ejecutándose en tiempo real.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
